@@ -35,7 +35,9 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+        System.out.println("New Session = " + request.getSession().isNew());
         HttpSession session = request.getSession();
+        session.setMaxInactiveInterval(60);
 
         String userName = (String) session.getAttribute("username");
         if (userName == null) {
