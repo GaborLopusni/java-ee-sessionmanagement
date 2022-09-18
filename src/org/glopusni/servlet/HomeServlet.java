@@ -48,11 +48,11 @@ public class HomeServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
 
-        StringBuilder sb = new StringBuilder("<!DOCTYPE html>\\n<html>\\n");
-        sb.append("<head><title>Home</title></head><body>\\n");
-        sb.append("\"<h3>HOME PAGE</h3><br><br><div>Welcome <b>");
+        StringBuilder sb = new StringBuilder("<!DOCTYPE html>\n<html>\n");
+        sb.append("<head><title>Home</title></head><body>\n");
+        sb.append("<h3>HOME PAGE</h3><br><br><div>Welcome <b>");
         sb.append(userName);
-        sb.append("<div><a href='Logout'>Logout</a></div>\\n\" + \"</body></html>");
+        sb.append("<div><a href='Logout'>Logout</a></div>\n</body></html>");
 
         out.write(sb.toString());
     }
